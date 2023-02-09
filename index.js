@@ -5,12 +5,12 @@ import './style.css';
 
 const appDiv = document.getElementById('app');
 
-let list = document.getElementsByClassName('back');
-console.log(list);
+let list = Array.from(document.getElementsByClassName('back'));
 
 window.addEventListener('scroll', function () {
-  for (var item in list) {
-    console.log(item);
-  }
+  list.forEach((item) => {
+    item.attributes.style.top = -5;
+  });
 });
 //
+scroll(0, 4);
